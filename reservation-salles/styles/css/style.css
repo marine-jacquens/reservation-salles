@@ -1,0 +1,1193 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*ALL*/
+:root{
+    --dark: #1A1A1A;
+    --light: #EBEBEB;
+    --gold: #c08d32;
+    --soft-gold: #F5DA95;
+    --dark-gold: #CE8025;
+}
+
+/* MONTSERRAT */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* LORA */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
+.content {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    transition: ease 0.05s;
+    box-sizing: border-box;
+}
+
+/****TRONC COMMUN****/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.body-user_reservation span,
+.body-inscription span,
+.body-profil span{
+    font-style: italic;
+    color: #af6408;
+    font-size: 15px;
+}
+
+
+
+
+/*** HEADER ***/
+
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header h6,
+header ul,
+header li {
+    margin: 0;
+    font-weight: normal;
+}
+
+header ul,
+header li {
+    list-style: none;
+    padding: 0;
+    height: 50px;
+}
+
+header {
+    background-color: #c08d32;
+    color: white;
+    font-family: 'Lora';
+    border-bottom:0.5px solid white;
+    z-index:4;
+}
+
+header h1:hover,
+header a:hover {
+    background-color: #F5DA95;
+    color: #1A1A1A;
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: 0 auto;
+    border-bottom:0.5px solid white;
+}
+
+.navbar > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul li {
+    flex: 1;
+}
+
+.liste {
+    position: relative;
+}
+
+.sous-liste {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: auto;
+    background-color: #c08d32;
+    border-bottom:0.5px solid white;
+}
+
+.liste:hover .sous-liste {
+    opacity: 1;
+    visibility: visible;
+}
+
+header a,
+.header_autre {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header a:hover,
+.header_autre:hover {
+    transform: scale(1.05);
+}
+.fa-bars{
+    z-index:3;
+    right: -70%;
+    top: 30%;
+}
+.liste2{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+}
+.sous-liste2{
+    opacity: 0;
+    visibility: hidden;
+    position:absolute;
+    background-color: #c08d32;
+    height:auto;
+    width: 100vw;
+    z-index:2;
+    padding-top: 50px;
+    top:0;
+    right:0;
+}
+.liste2:hover .sous-liste2{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*HEADER RESPONSIVE*/
+
+/*@media (min-width: 501px){
+
+}*/
+@media (max-width: 500px){
+    .liste2{
+        opacity: 1;
+        visibility: visible;
+        position:relative;
+    }
+    .resp_head{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        z-index:3;
+    }
+    .sous-liste2 *{
+        font-size: 18px;
+    }
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*** FOOTER ***/
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #C08D32;
+    color: white;
+    padding: 5%;
+    font-family: 'Montserrat';
+}
+.footer ul, .footer li{
+    padding: 0;
+}
+
+.after:after {
+    content: "・";
+    color: white;
+}
+
+.menu ul li {
+    display: inline;
+    font-size: 20px;
+}
+
+.RS ul li a {
+    font-size: 40px;
+}
+
+.RS ul li a:hover,
+.menu ul li:hover {
+    color: #333;
+}
+
+.RS ul li {
+    display: inline;
+
+}
+
+.footer i {
+    font-size: 30px;
+}
+
+.logo {
+    display: inline;
+}
+
+.logo h1 {
+    font-family: 'Courgette', cursive;
+    font-size: 30px;
+}
+
+
+
+
+/***RESPONSIVE HEADER + FOOTER***/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media (max-width:600px) {
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*** INDEX ***/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.banniere {
+    background: url(https://www.distinction.qc.ca/wp-content/uploads/DIST_Banniere_Salles_2128x638_soprano1.jpg) fixed;
+    background-size: contain;
+    color: white;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-shadow: 1px 1px 1px black;
+    padding: 2%;
+}
+
+.banniere h2 {
+    font-family: 'Courgette', cursive;
+    font-size:40px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.column h2 {
+    text-align: center;
+    font-weight: 200;
+    color: var(--gold);
+}
+
+.ligne {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card {
+    border: 0.1px solid var(--soft-gold);
+    width: 30%;
+    text-align: justify;
+}
+
+.image img {
+    width: 100%;
+}
+
+.card h3 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 200;
+    color: var(--gold);
+}
+
+.card p {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.espace {
+    padding: 5%;
+}
+
+.card a {
+    font-size: 15px;
+    background-color: var(--gold);
+    border: 0.1px solid var(--gold);
+    border-radius: 50px;
+    color: white;
+    padding: 2%;
+    width: 40%;
+    text-align: center;
+}
+
+.card a:hover {
+    background-color: white;
+    color: var(--gold);
+    transition: 1s;
+}
+
+.card a:active {
+    background-color: #F5DA95;
+    color: white;
+    transition: 1s;
+}
+
+.index-button {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+/*** RESPONSIVE INDEX ***/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+@media (max-width:900px) {
+
+    .banniere i {
+        font-size: 40px;
+        margin-right: 1%;
+    }
+
+    .ligne {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 40%;
+        margin-bottom: 5%;
+    }
+
+}
+
+@media (max-width:700px) {
+
+    .banniere i {
+        font-size: 30px;
+        margin-right: 1%;
+    }
+
+    .column h2 {
+        display: none;
+    }
+
+    .banniere {
+        height: 300px;
+    }
+
+    .ligne {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 70%;
+        margin-bottom: 5%;
+    }
+
+}
+@media (min-width: 630px){
+    .form-profil{
+        width:600px;
+    }
+    .form-profil p,
+    .form-profil p a,
+    .form-profil label {
+        font-size: 18px;
+    }
+    .profil-button{
+        font-size: 20px;
+    }
+    .main-profil p{
+        font-size:30px;
+    }
+}
+@media (max-width: 630px){
+    .form-profil{
+        width:90%;
+    }
+    .form-profil h2{
+        font-size: 1em;
+    }
+    .form-profil label{
+        font-size: 14px;
+    }
+    .profil-button{
+        font-size: 16px;
+    }
+    .main-profil p{
+        font-size: 20px;
+    }
+}
+
+
+
+
+/****INSCRIPTION****/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.body-inscription {
+    height: 100vh;
+}
+
+.main_connexion {
+    background-image: url(../../ressources/dark-1845065_1920.jpg);
+    background-size: cover;
+    background-position: fixed;
+}
+
+.main-inscription {
+    background-image: url(https://data.1freewallpapers.com/download/bengal-fire-sparks-glitter-dark-background.jpg);
+    background-size: contain;
+}
+
+.main-inscription,
+.main_connexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.form-inscription {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.832);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5%;
+    margin: auto;
+    min-width: 35vw;
+}
+
+.form-inscription h1 {
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.5px solid darkorange;
+    padding-bottom: 3%;
+}
+
+.form-inscription p {
+    text-align: center;
+}
+
+.form-inscription p,
+.form-inscription p a,
+.form-inscription label {
+    font-size: 18px;
+}
+
+.form-inscription p a {
+    text-decoration: underline;
+}
+
+.form-inscription p a:hover {
+    color: darkorange;
+}
+
+.form-inscription input[type="text"],
+.form-inscription input[type="password"] {
+    width: 100%;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: 1%;
+    border: none;
+    color: darkorange;
+    font-weight: bold;
+}
+
+.form-inscription input[type="text"]:hover,
+.form-inscription input[type="password"]:hover {
+    border: 1px solid darkorange;
+}
+.form-inscription input[type="submit"]{
+    width: 60%;
+}
+.form-inscription input[type="submit"]{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: darkorange;
+    font-family: 'Montserrat', sans-serif;
+    height: 40px;
+    padding: 1%;
+    border-radius: 50px;
+    border: none;
+    font-size: 20px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+
+}
+
+.inscription-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.form-inscription input[type="submit"]:hover{
+    transition: 1s;
+    background-color: #FFC146;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 5px #CE8025;
+
+}
+
+.form-inscription input[type="submit"]:active{
+    box-shadow: 0 4px #CE8025;
+    transform: translateY(4px);
+}
+
+
+
+
+/***RESPONSIVE INSCRIPTION***/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media (max-width:1270px) {
+
+    .form-inscription p,
+    .form-inscription p a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width:900px) {
+    .form-inscription {
+        min-width: 300px;
+    }
+
+    .form-inscription p,
+    .form-inscription p a,
+    .form-inscription label {
+        font-size: 15px;
+    }
+
+    .form-inscription input[type="submit"] {
+        height: 30px;
+    }
+
+
+}
+
+
+/*** CONNEXION ***/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/***RESPONSIVE CONNEXION***/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+
+/****PROFIL****/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.main-profil {
+    background:url(https://www.ambiance-sticker.com/images/Image/sticker-tapisserie-scandinave-vilfred-ambiance-sticker-col-mat-ROS-B726.png) center fixed;
+    background-size:contain;
+    padding: 2rem 0;
+}
+
+.main-profil h2{
+    text-align: center;
+}
+
+.main-profil p{
+    color:var(--soft-gold);
+    font-family: 'Courgette', cursive;
+    text-shadow:1px 1px 3px black;
+    -webkit-text-stroke: 1px #9c917c;
+}
+
+.contour-profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-profil {
+    display: flex;
+    flex-direction: column;
+    background-color: #9c917c;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 3%;
+    border-radius: 20px;
+    margin: 0.5rem;
+}
+
+.form-profil p a {
+    text-decoration: underline;
+}
+
+.form-profil p a:hover {
+    color: darkorange;
+}
+
+.form-profil input[type="text"],
+.form-profil input[type="password"] {
+    width: 100%;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: 1%;
+    border: none;
+    color:  #9c917c;
+    border-radius:10px;
+    outline:none;
+    font-weight: bold;
+}
+
+.form-profil input[type="text"]:hover,
+.form-profil input[type="password"]:hover {
+    border: 2px solid #eddebe;
+
+}
+
+.profil-button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: white;
+    background-color: #333;
+    font-family: 'Montserrat', sans-serif;
+    width: 60%;
+    height: 2rem;
+    padding: 1%;
+    border-radius: 50px;
+    border: none;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+.profil-button:hover {
+    transition: 1s;
+    background-color: #FFC146;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 5px #CE8025;
+
+}
+
+.profil-button:active {
+
+    box-shadow: 0 4px #CE8025;
+    transform: translateY(4px);
+}
+
+
+
+
+/****RESPONSIVE PROFIL****/
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+/****USER RESERVATION (modification)****/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.main-user_reservation {
+    background:url(https://www.ambiance-sticker.com/images/Image/sticker-tapisserie-scandinave-vilfred-ambiance-sticker-col-mat-ROS-B726.png) center fixed;
+    background-size:contain;
+    padding: 5%;
+}
+
+
+.main-user_reservation{
+    color:black;
+    font-size:30px;
+    font-weight:bold;
+
+}
+
+.main-user_reservation h2{
+}
+
+.main-user_reservation p{
+    font-family: Montserrat;
+}
+
+.contour-user_reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.form-user_reservation{
+    display: flex;
+    flex-direction: column;
+    background-color: #9c917c;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5%;
+    width: 60%;
+    border-radius: 20px;
+    margin-bottom: 2%;
+}
+
+.form-user_reservation p,
+.form-user_reservation p a,
+.form-user_reservation label {
+    font-size: 18px;
+}
+
+.form-user_reservation p a {
+    text-decoration: underline;
+}
+
+.form-user_reservation p a:hover {
+    color: darkorange;
+}
+
+.form-user_reservation input[type="text"],
+.form-user_reservation input[type="password"] {
+    width: 100%;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: 1%;
+    border: none;
+    color:  #9c917c;
+    border-radius:10px;
+    outline:none;
+    font-weight: bold;
+}
+
+.form-user_reservation input[type="text"]:hover,
+.form-user_reservation input[type="password"]:hover {
+    border: 2px solid #eddebe;
+
+}
+
+.user_reservation-boutons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.user_reservation-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #333;
+    font-family: 'Montserrat', sans-serif;
+    width: 30%;
+    height: 40px;
+    padding: 1%;
+    border-radius: 50px;
+    border: none;
+    font-size: 20px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+.user_reservation-button:hover {
+    transition: 1s;
+    background-color: #FFC146;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 5px #CE8025;
+
+}
+
+.user_reservation-button:active {
+
+    box-shadow: 0 4px #CE8025;
+    transform: translateY(4px);
+}
+
+.user_reservation-delete{
+    border-radius:50%;
+    background-color:#FFC146;
+    border:none;
+    height:40px;
+    width:7%;
+    align-items:  center;
+}
+
+.user_reservation-delete:hover{
+    background-color:#E94C16;
+    transition:1s;
+}
+
+
+/****USER RESERVATION (modification) RESPONSIVE****/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@media (max-width:700px) {
+
+
+}
+
+
+@media (min-width: 630px){
+    .form-user_reservation{
+        width:600px;
+    }
+    .form-user_reservation p,
+    .form-user_reservation p a,
+    .form-user_reservation label {
+        font-size: 18px;
+    }
+    .user_reservation-button{
+        font-size: 20px;
+    }
+    .main-user_reservation p{
+        font-size:30px;
+
+    }
+}
+
+
+@media (max-width: 630px){
+    .form-user_reservation{
+        width:90%;
+    }
+    .form-user_reservationl h2{
+        font-size: 1em;
+    }
+    .form-user_reservation label{
+        font-size: 14px;
+    }
+    .main-user_reservation p{
+        font-size: 20px;
+    }
+    .contour-user_reservation p{
+        font-size: 16px;
+        text-align: center;
+    }
+}
+@media (max-width: 501px){
+    .user_reservation-delete{
+        min-width:70%;
+        border-radius: 50px;
+    }
+    .user_reservation-button{
+        font-size: 16px;
+        min-width: 100%;
+    }
+
+}
+@media (max-width: 500px) {
+    .user_reservation-boutons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+/****PLANNING****/
+.reserve_box{
+    max-width: 1000px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form_multiples_creneaux{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+    background-color:#333333;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #F5DA95;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.planning-form{
+    background:url(https://www.solcolor.fr/3137-thickbox_default/papier-peint-a-motif-retro-orange-et-gris-grandeco.jpg) center fixed;
+    background-size:contain;
+}
+
+.reservation-form{
+    background-color:#333;
+    color:white;
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+}
+
+.reservation-form h2, p{font-family: 'Montserrat', sans-serif;}
+
+.week-container-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+
+}
+.week-calendar{
+    width:80%;
+    padding:1%;
+}
+
+.week-container-group table {
+   background-color:white;
+    border-bottom-left-radius: 5px;
+     border-bottom-right-radius: 5px;
+}
+
+
+.week-calendar th,
+td,
+table {
+    border: 0.1px solid lightgray;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+
+}
+
+
+.week-calendar th,
+td{
+    border-radius:5px;
+}
+
+.week-calendar th {
+    background-color: #333;
+    color: white;
+    height: 20px;
+    padding: 1%;
+}
+
+.week-calendar td{
+    font-size:15px;
+    font-weight:200;
+}
+
+.week-calendar .heure-titre{
+    color:white;
+    background-color:#C08D32;
+}
+
+.week-calendar .heure {
+    background-color:#C08D32;
+    color:white;
+    text-align: center;
+}
+
+.week-calendar .reservation{
+     background-color: lightgray;
+}
+
+.week-calendar .reservation a:hover{
+    background-color:grey;
+    text-decoration: underline;
+    border-radius:5px;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/****RESPONSIVE PLANNING****/
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+/****RESERVATION-FORM****/
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.form_element{
+    display:flex;
+    flex-direction: column;
+}
+
+.reservation-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+    margin-top:5%;
+}
+
+.form-reservation-input label{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-reservation-input input[type="text"],
+.form-reservation-input input[type="date"],
+.form-reservation-input input[type="time"]
+{
+    border-radius:5px;
+    border:0.1px solid lightgray;
+    height:25px;
+    outline-color:#C08D32;
+    font-family: 'Montserrat', sans-serif;
+    padding:1%;
+    font-weight:bold;
+}
+
+.form-reservation-input input[type="date"]{
+    width:40%;
+}
+
+.ligne-form-resa{
+    display:flex;
+    justify-content: space-around;
+}
+
+
+.form-reservation_button{
+    border-radius:10px;
+    height:40px;
+    border:0.1px solid lightgray;
+    font-family: 'Montserrat', sans-serif;
+    padding:2%;
+    font-size:15px;
+    background-color:#333;
+    color:white;
+    font-weight:100;
+    outline:none;
+    align-self: center;
+}
+
+.form-reservation_button:hover{
+    color:#333;
+    background-color:lightgray;
+    border:1px solid gray;
+    transition :1s;
+}
+
+.form-reservation_button:active{
+    color:white;
+    background-color:grey;
+    border:1px solid #333;
+    transition :2s;
+}
+
+
+
+/****RESPONSIVE RESERVATION-FORM****/
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+
+
+/****RESERVATION****/
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+.body-reservation{
+    background:url(https://majoliechambre.fr/wp-content/uploads/2019/07/papier-peint-fleurs-dor%C3%83%C2%A9es-compressor.png) center fixed;
+    background-size:contain;
+}
+
+.reservation-event{
+    margin-top:10%;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#333;
+    color:white;
+    padding:2%;
+    margin-bottom: 5%;
+    width:50%;
+    text-align: center;
+}
+
+
+.reservation-event h2{
+    text-align:center;
+}
+
+.reservation-event span {
+    font-weight:bold;
+}
+
+/****RESERVATION RESPONSIVE****/
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
